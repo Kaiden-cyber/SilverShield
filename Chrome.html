@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <div class="navbar">
+      <span class="menu" onclick="openNav();">&#9776;</span>
+
+      <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" style="font-size: 65px;" class="closebtn" onclick="closeNav();">&times;</a>
+
+        <a href="/index.html" class="main"><i class="fa-solid fa-house" style="padding-right: 25px;">
+        </i>Home</a>
+
+        <a href="/resources.html" class="main"><i class="fa-solid fa-book" style="padding-right: 25px;">
+        </i>Resources</a>
+
+        <a href="#" class="main"><i class="fa-brands fa-chrome" style="padding-right: 25px;">
+        </i>Chrome Extension</a>
+
+        <a href="/mission.html" class="main"><i class="fa-solid fa-rocket" style="padding-right: 25px;">
+        </i>Mission</a>
+      </div>
+
+          <a href="index.html"> <img class="logo" src="Logo.png" width="100px;"></img></a>
+          <div class="navItems">
+            <div class="navText">
+              <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <a>Home</a>
+              </a>
+            </div>
+
+        <div class="navText">
+          <a href="/resources.html">
+        <i class="fa-solid fa-book"></i>
+        <a>Resources</a>
+          </a>
+        </div>
+
+        <div class="navText">
+          <a href="#">
+          <i class="fa-brands fa-chrome"></i>
+          <a>Chrome Extension</a>
+          </a>
+        </div>
+
+        <div class="navText">
+          <a href = "mission.html">
+            <i class="fa-solid fa-rocket"></i>
+            <a>Mission</a>
+          </a>
+        </div>
+      </div>
+    </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <h1 class="title">Chrome Extension <i class="fa-brands fa-chrome" style="padding-right: 25px;">
+    </i></h1>
+  </head>
+  <body>
+    <div class="multi-box">
+        <div class="text-block">
+            <h2>What Does it do?</h2>
+            <ul>
+                <li>Provides you with a guide to catch phishing emails</li>
+                <li>Allows you to easily view the real email of a sender</li>
+                <li>Allows you to view the url that links are taking you to</li>
+                <li>Creates a checkpoint to verify suspicious or accidentially clicked on links</li>
+                <li>Includes an easy way to run the link through an antivirus</li>
+            </ul>
+            
+        <img src="/Phish-Detective-Link.png" class="image" style="border-radius: 25px;display: flex;margin: auto;"></img>
+        </div>
+        <div class="text-block">
+            <h2>How Do I install it?</h2>
+            <ol>
+                <li>Click <a style="color: black;" target="_blank" href="https://chromewebstore.google.com/detail/phish-detective/cpkoilmkgngicihmhfchdbdmnnopbbkh">here</a></li>
+                <li>Press add to Chrome!</li>
+            </ol>
+            <h3>Once installed you need to click on the extension for it to load in your options</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

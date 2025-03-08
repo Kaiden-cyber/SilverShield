@@ -1,0 +1,322 @@
+* {
+  font-family: "Bad Script", serif;
+}
+body {
+  padding-top: 5%;
+  background-color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.7);
+}
+#container {
+  text-align: center;
+}
+
+#text {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 30px;
+  background-color: black;
+  animation: blink 0.75s step-end infinite;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.menu {
+  display: none;
+}
+.navText {
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-size: 25px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-size: 25px;
+  padding: 8px 8px 8px 32px;
+}
+
+.navText a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.navText i {
+  font-size: 25px;
+}
+.navItems {
+  display: flex;
+  gap: 100px;
+  margin: auto;
+}
+
+.text-block,
+.text-link {
+  border: 3px solid black;
+  margin: auto;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  width: max-content;
+  max-width: 95%;
+  padding: 10px;
+  font-size: 20px;
+  flex: 1 1 40%;
+  transition: border 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.text-block a,
+li {
+  font-family: "IM Fell French Canon", serif;
+}
+.text-block p {
+  margin-top: 0;
+}
+.text-block:hover {
+  border: 3px solid #4f7838;
+  background-color: #4f7838;
+}
+.text-link:hover {
+  border: 3px solid #4f7838;
+  background-color: #4f7838;
+}
+li {
+  padding: 5px;
+}
+.image {
+  margin: auto;
+  max-width: 50%;
+  border-radius: 50px;
+}
+
+.multi-box {
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: auto;
+  display: flex;
+  max-width: 95%;
+}
+
+h2,
+h3 {
+  font-family: "Bad Script", serif;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-bottom: 0;
+}
+.mobile {
+  max-width: 60%;
+}
+.text-link {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}
+.learn-box {
+  border: 3px solid black;
+  margin: auto;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  width: 65%;
+  padding: 10px;
+  display: flex;
+}
+.mail-side {
+  font-family: "IM Fell French Canon", serif;
+  border-right: 3px solid black;
+  color: black;
+  width: 25%;
+  display: block;
+  padding: 10px;
+  overflow: hidden;
+}
+.mail-side h4 {
+  font-family: "IM Fell French Canon", serif;
+  font-weight: 900;
+  margin: 0;
+}
+.mail-side p {
+  font-family: "IM Fell French Canon", serif;
+  margin: 0;
+}
+.mail-div {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+.mail-div:hover {
+  cursor: pointer;
+  background: rgba(168, 168, 168, 0.8);
+}
+.break {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: 2px solid black;
+}
+.learn-bar {
+}
+.mail-content {
+  margin-left: 20px;
+  display: flex;
+  overflow: scroll;
+  max-height: 500px;
+  flex-direction: column;
+  gap: 15px;
+}
+.mail-content p {
+  font-family: "IM Fell French Canon", serif;
+}
+.email-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.flag {
+  color: red;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.mail-banner {
+  display: block;
+  border: solid 4px black;
+  width: 95%;
+  border-radius: 25px;
+  align-items: center;
+  margin: auto;
+}
+.mail-banner-button button {
+  display: none; /*flex*/
+  font-size: 35px;
+  border-radius: 15px;
+  background: none;
+  border: none;
+  margin-left: auto;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.mail-banner-body {
+  font-family: "IM Fell French Canon", serif;
+  margin-left: 10px;
+  display: block;
+}
+.mail-banner-body strong {
+  font-size: 20px;
+  font-family: "IM Fell French Canon", serif;
+}
+.mail-arrow {
+  display: none;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  #text {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  #cursor {
+    height: 20px;
+  }
+  .navItems {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .navbar {
+    background: none;
+  }
+  .menu {
+    display: flex;
+    font-size: 65px;
+  }
+  h1 {
+    padding-top: 10%;
+    font-size: 50px;
+  }
+  .image {
+    margin: auto;
+    max-width: 95%;
+    border-radius: 25px;
+  }
+  .mobile {
+    max-width: 85%;
+  }
+  .learn-box {
+    width: 95%;
+  }
+  .mail-side {
+    width: 95%;
+    font-size: 20px;
+    border-right: none;
+  }
+  .mail-arrow {
+    display: flex;
+  }
+}
