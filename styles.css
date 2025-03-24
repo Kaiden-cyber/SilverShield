@@ -48,6 +48,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 15px;
+  z-index: 10;
 }
 .menu {
   display: none;
@@ -71,7 +72,7 @@ h1 {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   background: white;
@@ -158,6 +159,7 @@ h3 {
   color: black;
   text-align: center;
   margin-bottom: 0;
+  margin: auto;
 }
 .mobile {
   max-width: 60%;
@@ -166,16 +168,6 @@ h3 {
   display: block;
   margin: auto;
   text-decoration: none;
-}
-.learn-box {
-  border: 3px solid black;
-  margin: auto;
-  color: black;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 25px;
-  width: 65%;
-  padding: 10px;
-  display: flex;
 }
 .mail-side {
   font-family: "IM Fell French Canon", serif;
@@ -187,11 +179,13 @@ h3 {
   overflow: hidden;
 }
 .mail-side h4 {
+  color: black;
   font-family: "IM Fell French Canon", serif;
   font-weight: 900;
   margin: 0;
 }
 .mail-side p {
+  color: black
   font-family: "IM Fell French Canon", serif;
   margin: 0;
 }
@@ -200,25 +194,28 @@ h3 {
   color: black;
   padding: 5px;
   border-radius: 10px;
+  font-size: 20px;
 }
 .mail-div:hover {
   cursor: pointer;
   background: rgba(168, 168, 168, 0.8);
+}
+.mail-div p{
+  font-family: "IM Fell French Canon", serif;
 }
 .break {
   margin-top: 5px;
   margin-bottom: 5px;
   border-top: 2px solid black;
 }
-.learn-bar {
-}
 .mail-content {
   margin-left: 20px;
   display: flex;
-  overflow: scroll;
-  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   flex-direction: column;
   gap: 15px;
+  padding-left: 15px;
 }
 .mail-content p {
   font-family: "IM Fell French Canon", serif;
@@ -245,10 +242,10 @@ h3 {
 .mail-banner {
   display: block;
   border: solid 4px black;
-  width: 95%;
+  width: 98%;
   border-radius: 25px;
   align-items: center;
-  margin: auto;
+  margin-right: auto;
 }
 .mail-banner-button button {
   display: none; /*flex*/
@@ -274,6 +271,198 @@ h3 {
   align-items: center;
   font-weight: bold;
   font-size: 20px;
+  color: black;
+}
+.learn-box {
+  border: 3px solid black;
+  margin-right: auto;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  width: 65%;
+  padding: 10px;
+  display: flex;
+}
+.learn-bar {
+  border: 3px solid black;
+  color: black;
+  background: lightgrey;
+  border-radius: 25px;
+  width: 20%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin: auto;
+}
+.learn-bar-elem p {
+  padding-top: 17px;
+  margin: auto;
+  text-align: center;
+  transition: background 0.2s ease-in-out;
+  border-radius: 10px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.learn-bar-elem p:hover {
+  width: 100%;
+  cursor: pointer;
+  background: #e9e9e9;
+}
+.learn-container {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+.learn-bar-mobile {
+  display: none;
+}
+
+.slide-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin: auto;
+  max-width: fit-content;
+  padding: 15px;
+  position: relative;
+  color: black;
+  text-align: center;
+}
+
+/* Left Bracket */
+.slide-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px; /* Length of the top and bottom lines (horizontal) */
+  height: 100%; /* Full height for the side line */
+  border-left: 2px solid #05d5a0; /* Left side line */
+  border-top: 2px solid #05d5a0; /* Top horizontal line */
+  border-bottom: 2px solid #05d5a0; /* Bottom horizontal line */
+}
+
+/* Right Bracket */
+.slide-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px; /* Length of the top and bottom lines (horizontal) */
+  height: 100%; /* Full height for the side line */
+  border-right: 2px solid #05d5a0; /* Right side line */
+  border-top: 2px solid #05d5a0; /* Top horizontal line */
+  border-bottom: 2px solid #05d5a0; /* Bottom horizontal line */
+}
+.slide-head {
+  font-size: 35px;
+}
+.slide-body {
+  font-size: 20px;
+}
+.slide-img {
+  max-width: 10%;
+}
+.slide {
+  display: block;
+  margin: 5px;
+}
+.slide-quote {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+}
+#slideshow {
+  color: black;
+  background: lightgray;
+  display: flex;
+  height: 65vh;
+  overflow-y: auto;
+}
+.slide-buttons {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  top: 0px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: sticky
+}
+#slide-back {
+  transition: background 0.2s ease-in-out;
+  border-radius: 15px;
+  padding: 10px;
+}
+#slide-back:hover {
+  background: #e9e9e9;
+}
+#slide-next {
+  transition: background 0.2s ease-in-out;
+  border-radius: 15px;
+  padding: 10px;
+}
+#slide-next:hover {
+  background: #e9e9e9;
+}
+.num-border {
+  font-size: 50px;
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.num-border::before,
+.num-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+}
+
+.num-border::before {
+  border-color: #4f7838;
+  transform: translate(8px, 8px); /* Slight offset */
+  z-index: -2;
+}
+
+.num-border::after {
+  border-color: orange;
+  transform: translate(
+    -8px,
+    -8px
+  ); /* Slight offset in the opposite direction */
+  z-index: -1;
+}
+.scams-div{
+  max-width: 45%;
+}
+.scams-container{
+  display: flex;
+}
+.smaller{
+  font-size: 25px
+}
+.slide, .mail-content, #slideshow {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+.slide::-webkit-scrollbar, .mail-content::-webkit-scrollbar, #slideshow::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+#content strong{
+  font-family: "IM Fell French Canon", serif;
 }
 @media (max-width: 768px) {
   #text {
@@ -293,8 +482,12 @@ h3 {
     background: none;
   }
   .menu {
+    cursor: pointer;
     display: flex;
     font-size: 65px;
+    position: fixed;
+    margin-top: 50px;
+    left: 20px;
   }
   h1 {
     padding-top: 10%;
@@ -310,6 +503,25 @@ h3 {
   }
   .learn-box {
     width: 95%;
+    margin: auto;
+    padding-left: 0;
+  }
+  .learn-bar {
+    width: 95%;
+    margin: auto;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  .mail-div{
+    font-size: 25px;
+  }
+  .scams-div{
+    max-width: 100%;
+    padding-top: 25px;
+  }
+  .learn-container, .scams-container {
+    margin: auto;
+    display: block;
   }
   .mail-side {
     width: 95%;
@@ -318,5 +530,56 @@ h3 {
   }
   .mail-arrow {
     display: flex;
+  }
+  .mail-banner {
+    width: 95%;
+  }
+  .learn-bar-elem {
+    display: none;
+  }
+  .learn-bar-mobile {
+    display: flex;
+  }
+  .learn-bar-mobile p {
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  .slide-quote {
+    width: 85%;
+  }
+  .slide-head {
+    font-size: 25px;
+  }
+  .slide-title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .slide-body{
+    font-size: 17px;
+  }
+  .num-border {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .num-border::before {
+    transform: translate(5px, 5px);
+  }
+  .num-border::after {
+    transform: translate(-5px, -5px);
+  }
+  #slideshow{
+    height: 80vh;
+  }
+  .smaller{
+    font-size: 20px;
+  }
+  .mail-content{
+    margin-left: 0;
   }
 }
