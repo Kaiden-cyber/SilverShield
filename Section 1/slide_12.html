@@ -1,0 +1,106 @@
+<div class="mail-side">
+  <h2 style="margin-top: 0; margin-bottom: 10px; color: black">
+    Inbox <i class="fa-solid fa-envelope"></i>
+  </h2>
+  <div id="email-0" class="mail-div" onclick="loadEmail(0);">
+    <h4>Amazon</h4>
+    <p>Urgent: Issue with Your Recent...</p>
+  </div>
+  <div class="break"></div>
+  <div id="email-1" class="mail-div" onclick="loadEmail(1);">
+    <h4>FedEx</h4>
+    <p>Your FedEx Package Delivery...</p>
+  </div>
+  <div class="break"></div>
+  <div id="email-2" class="mail-div" onclick="loadEmail(2);">
+    <h4>PayPal</h4>
+    <p>Invoice #INV-908765...</p>
+  </div>
+  <div class="break"></div>
+  <div id="email-3" class="mail-div" onclick="loadEmail(3);">
+    <h4>Troy Wallace</h4>
+    <p>[External] Urgent Request for...</p>
+  </div>
+  <div class="break"></div>
+  <div id="email-4" class="mail-div" onclick="loadEmail(4);">
+    <h4>Grandma Edna</h4>
+    <p>Snacks For Your Visit</p>
+  </div>
+</div>
+<div class="mail-content" style="width: 100%; display: none">
+  <div class="mail-banner" style="background: #d9dada">
+    <a
+      id="mail-banner-head"
+      style="
+        font-size: 30px;
+        font-weight: bold;
+        padding: 5px;
+        display: block;
+        text-align: center;
+      "
+      >Email Report Card:</a
+    >
+    <a
+      id="mail-banner-head"
+      style="font-size: 25px; font-weight: bold; padding: 3px; display: block"
+      >Subject Line:</a
+    >
+    <a id="mail-banner-body" class="mail-banner-body"></a>
+    <a
+      id="mail-banner-head"
+      style="font-size: 25px; font-weight: bold; padding: 3px; display: block"
+      >Sender Information:</a
+    >
+    <a id="mail-banner-body" class="mail-banner-body"></a>
+    <a
+      id="mail-banner-head"
+      style="font-size: 25px; font-weight: bold; padding: 3px; display: block"
+      >Content and Language:</a
+    >
+    <a id="mail-banner-body" class="mail-banner-body"></a>
+    <a
+      id="mail-banner-head"
+      style="font-size: 25px; font-weight: bold; padding: 3px; display: block"
+      >Requests for Information/Money:</a
+    >
+    <a id="mail-banner-body" class="mail-banner-body"></a>
+    <a id="mail-banner-body" style="margin: auto; padding: 10px"></a>
+    <div class="mail-banner-button">
+      <button
+        id="mail-button"
+        onclick="hideBanner();"
+        style="font-size: 30px; color: black"
+      >
+        <i class="fa-solid fa-check" style="font-size: 45px; color: green"></i>
+        Got it!
+      </button>
+    </div>
+  </div>
+  <div style="display: block; width: 100%">
+    <div class="mail-arrow" onclick="backArrow();">
+      <i class="fa-solid fa-arrow-left" style="margin-right: 8px"></i>
+      <p>Back</p>
+    </div>
+    <p id="title" style="margin: 0; font-size: 25px; font-weight: bold"></p>
+  </div>
+  <div class="email-header-container">
+    <img
+      id="pfp"
+      src="basic pfp.png"
+      style="border-radius: 50px; width: 55px; height: 55px; display: none"
+    />
+    <div class="email-header">
+      <p id="name" style="margin-bottom: 0"></p>
+      <p id="email" style="margin: 0"></p>
+    </div>
+    <div class="flag" onclick="toggleFlag();">
+      <i id="flag" class="fa-regular fa-flag"></i>
+      <p style="font-size: 17px; color: black; margin: auto; font-weight: bold">
+        Flag for Phishing
+      </p>
+    </div>
+  </div>
+  <div style="display: block">
+    <p id="content"></p>
+  </div>
+</div>
