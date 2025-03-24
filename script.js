@@ -177,7 +177,7 @@ async function loadSection(section, slide) {
   currentSection = section;
   currentSlide = slide;
   const data = await loadHTML(
-    "/Section " + section + "/slide_" + slide + ".html"
+    "Section " + section + "/slide_" + slide + ".html"
   );
   var slideBox = document.getElementById("slideshow");
   slideBox.innerHTML = data;
