@@ -114,16 +114,11 @@ function checkFlag() {
       //Correct Banner
       emailsLeft -= 1;
       document.getElementsByClassName("mail-banner")[0].style.border =
-        "4px solid green";
-      if (emailsLeft > 0) {
-        document.getElementById("email-" + currentEmail).style.background =
-          "lightgreen";
-        correctEmails[currentEmail] = true;
-        loadBanner();
-      } else {
-        //Move on, activity completed
-        alert("Activity Complete!");
-      }
+        "4px solid #4f7838";
+      document.getElementById("email-" + currentEmail).style.background =
+        "#6ca24e";
+      correctEmails[currentEmail] = true;
+      loadBanner();
     } else {
       //Incorrect Banner
       document.getElementsByClassName("mail-banner")[0].style.border =
@@ -140,7 +135,16 @@ function loadBanner() {
   }
 }
 function hideBanner() {
-  document.getElementsByClassName("mail-banner")[0].style.display = "none";
+  //if activity is complete
+  if (emailsLeft < 1) {
+    loadNext();
+    currentEmail = -1;
+    emailsLeft = 3;
+    correctEmails = [false, false, false, false, false];
+  } else {
+    document.getElementsByClassName("mail-banner")[0].style.display = "none";
+    document.getElementsByClassName("mail-content")[0].scrollTop = 0;
+  }
 }
 function toggleFlag() {
   var flag = document.getElementById("flag");
@@ -149,8 +153,35 @@ function toggleFlag() {
     checkFlag();
   }
 }
-
+//For Phishing Activity on Mobile
 function backArrow() {
   document.getElementsByClassName("mail-side")[0].style.display = "block";
   document.getElementsByClassName("mail-content")[0].style.display = "none";
+}
+/*
+  Start Slide Functions:
+*/
+var currentSection = 2;
+var currentSlide = 1;
+function loadNext() {
+  loadSection(currentSection, currentSlide + 1);
+}
+function loadPrev() {
+  loadSection(currentSection, currentSlide - 1);
+}
+async function loadHTML(filename) {
+  const response = await fetch(filename);
+  return await response.text();
+}
+async function loadSection(section, slide) {
+  currentSection = section;
+  currentSlide = slide;
+  const data = await loadHTML(
+    "/Section " + section + "/slide_" + slide + ".html"
+  );
+  var slideBox = document.getElementById("slideshow");
+  slideBox.innerHTML = data;
+  if (slide == 1) {
+    document.getElementById("slide-back").onclick = "";
+  }
 }
