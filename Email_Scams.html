@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+      </style>
+    <link rel="stylesheet" src="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <div class="navbar">
+      <span class="menu" onclick="openNav();">&#9776;</span>
+
+      <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" style="font-size: 65px;" class="closebtn" onclick="closeNav();">&times;</a>
+
+        <a href="index.html" class="main"><i class="fa-solid fa-house" style="padding-right: 25px;">
+        </i>Home</a>
+
+        <a href="resources.html" class="main"><i class="fa-solid fa-book" style="padding-right: 25px;">
+        </i>Resources</a>
+
+        <a href="Chrome.html" class="main"><i class="fa-brands fa-chrome" style="padding-right: 25px;">
+        </i>Chrome Extension</a>
+
+        <a href="mission.html" class="main"><i class="fa-solid fa-rocket" style="padding-right: 25px;">
+        </i>Mission</a>
+      </div>
+
+          <a href="index.html"> <img class="logo" src="Logo.png" width="100px;"></img></a>
+          <div class="navItems">
+            <div class="navText">
+              <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+              <a>Home</a>
+              </a>
+            </div>
+
+        <div class="navText">
+          <a href="resources.html">
+        <i class="fa-solid fa-book"></i>
+        <a>Resources</a>
+          </a>
+        </div>
+
+        <div class="navText">
+          <a href="Chrome.html">
+          <i class="fa-brands fa-chrome"></i>
+          <a>Chrome Extension</a>
+          </a>
+        </div>
+
+        <div class="navText">
+          <a href = "mission.html">
+            <i class="fa-solid fa-rocket"></i>
+            <a>Mission</a>
+          </a>
+        </div>
+      </div>
+    </div>
+    <h1 class="title" style="margin-bottom: 0;"><i class="fa-solid fa-fish"></i> Phishing <i class="fa-solid fa-fish"></i></h1>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SilverSheild Cybersecurity</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="learn-container">
+      <div class="learn-bar" title="Click on a Section to Skip to it!">
+        <h2 style="font-size: 30px;">Section Guide:</h2>
+        <!--PC UI-->
+        <div class="learn-bar-elem" onclick="loadSection(100, 1);">
+          <p onclick="window.location.href = 'Phishing.html';">Back to Main Page</p>
+        </div>
+        
+        <div class="learn-bar-elem" onclick="loadSection(100, 1);">
+          <p>Account Alerts Scam</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(100, 2);">
+          <p>Invoice Scam</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(100, 3);">
+          <p>IRS scam</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(100, 4);">
+          <p>Job Offer Scam</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(100, 5);">
+          <p>Charity Scam</p>
+        </div>
+        <div class="learn-bar-elem" onclick="loadSection(100, 6);">
+          <p>Document Scam</p>
+        </div>
+        <div class="learn-bar-elem" onclick="loadSection(100, 7);">
+          <p>Lottery Scam</p>
+        </div>
+
+
+        <!--Mobile UI-->
+        <div class="learn-bar-mobile"><p>Click on a Section to Skip to it!</p></div>
+        <div class="learn-bar-mobile" >
+          <p onclick="window.location.href = 'Phishing.html';">Back to Main Page</p>
+          <p onclick="loadSection(100, 5);">Job Offer Scam</p>
+        </div>
+
+        <div class="learn-bar-mobile">
+          <p onclick="loadSection(100, 2);">Account Alerts Scam</p>
+          <p onclick="loadSection(100, 6);">Charity Scam</p>
+        </div>
+
+        <div class="learn-bar-mobile">
+          <p onclick="loadSection(100, 3);">Invoice Scam</p>
+          <p onclick="loadSection(100, 7);">Document Sharing Scam</p>
+        </div>
+        <div class="learn-bar-mobile">
+          <p onclick="loadSection(100, 4);">IRS Scam</p>
+          <p onclick="loadSection(100, 4);">Lottery Scam</p>
+        </div>
+      </div>
+
+
+      <div id="slideshow" class="learn-box">
+      </div>
+  </div>
+    <script src="script.js"></script>
+    <script>loadSection(100,1);</script>
+  </body>
+</html>
