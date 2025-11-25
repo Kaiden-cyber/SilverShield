@@ -1,0 +1,70 @@
+<div
+  class="slide"
+  style="
+    margin: auto;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  "
+>
+  <div class="slide-buttons">
+    <a id="slide-back" style="cursor: pointer" onclick="loadPrev();">< Back</a>
+    <a id="slide-next" style="cursor: pointer" onclick="loadNext();">Next ></a>
+  </div>
+
+  <h1 class="num-border">Password Generator</h1>
+  <div class="slide-quote">
+    Click next when you are done generating your password! <br />
+    <strong>Click the password to copy it!</strong>
+  </div>
+  <div class="pwgen-container">
+    <div class="pwgen-section">
+      <div class="pwgen-value" id="pwgen-slider-value">Password Length 15</div>
+      <input type="range" id="pwgen-slider" min="5" max="30" value="10" />
+    </div>
+
+    <div class="pwgen-section pwgen-options">
+      <label class="pwgen-checkbox-label">
+        <input
+          type="checkbox"
+          class="pwgen-checkbox"
+          id="pwgen-symbols"
+          onclick="generatePassword();"
+          checked
+        />
+        Symbols
+      </label>
+      <label class="pwgen-checkbox-label">
+        <input
+          type="checkbox"
+          class="pwgen-checkbox"
+          id="pwgen-numbers"
+          onclick="generatePassword();"
+          checked
+        />
+        Numbers
+      </label>
+      <div class="pwgen-buttons">
+        <button
+          id="regen-btn"
+          onclick="generatePassword();"
+          style="cursor: pointer; font-size: 20px"
+        >
+          Regenerate <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="pwgen-section">
+      <div
+        class="pwgen-output"
+        id="pwgen-output"
+        onclick="copyPassword();"
+        style="cursor: pointer"
+      >
+        Your password will appear here
+      </div>
+    </div>
+  </div>
+</div>

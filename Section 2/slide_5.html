@@ -1,0 +1,27 @@
+<div
+  class="slide"
+  style="
+    margin: auto;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  "
+>
+  <div class="slide-buttons">
+    <a id="slide-back" style="cursor: pointer" onclick="loadPrev();">< Back</a>
+    <a id="slide-next" style="cursor: pointer" onclick="loadNext();">Next ></a>
+  </div>
+
+  <h1 class="num-border">Password Strength</h1>
+  <br />
+  <div class="slide-quote">Enter a password below to check its strength</div>
+  <br />
+  <input style="font-size: 1.5rem; border-radius: 15px; border: 5px solid black;
+  font-family: "Raleway", sans-serif;" type="password" name="password"
+  placeholder="Enter Password Here" id="password"
+  onkeyup="passwordStrength(this.value);" />
+  <div class="slide-quote" id="strength-text" style="font-size: 15px">
+    Enter Your Password to get Started!
+  </div>
+</div>
