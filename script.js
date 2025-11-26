@@ -184,4 +184,40 @@ async function loadSection(section, slide) {
   if (slide == 1) {
     document.getElementById("slide-back").onclick = "";
   }
+  if (section == 2 && slide == 3) {
+    generatePassword();
+    var passSlider = document.getElementById("pwgen-slider");
+    passSlider.addEventListener("input", function (event) {
+      generatePassword();
+    });
+  }
+}
+
+//Password Generator
+
+function generatePassword() {
+  var passLength = document.getElementById("pwgen-slider").value;
+  var hasSymbols = document.getElementById("pwgen-symbols").checked;
+  var hasNumbers = document.getElementById("pwgen-numbers").checked;
+  document.getElementById("pwgen-slider-value").innerText =
+    "Password Length: " + passLength;
+  var outputBox = document.getElementById("pwgen-output");
+  var charString = "|!@#$%^&*()_+";
+  var numString = "1234567890";
+  var letterString = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+  var masterString = "";
+  if (hasSymbols && numString) {
+    masterString = charString + letterString + numString;
+  } else if (hasSymbols) {
+    masterString = charString + letterString;
+  } else if (hasNumbers) {
+    masterString = letterString + numString;
+  } else {
+    masterString = letterString;
+  }
+  var passString = "";
+  for (var i = 0; i < passLength; i++) {
+    passString += masterString[Math.floor(Math.random() * masterString.length)];
+  }
+  outputBox.innerText = passString;
 }
