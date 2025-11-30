@@ -5,7 +5,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
       </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" src="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <div class="navbar">
       <span class="menu" onclick="openNav();">&#9776;</span>
 
@@ -61,9 +61,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SilverSheild Cybersecurity</title>
     <link rel="stylesheet" href="styles.css" />
-    <h1 class="title">This Page is Under Construction, Please Come Back Later!</h1>
+    <link rel="stylesheet" href="passwords.css" />
+    <h1 class="title" style="margin-bottom: 0;"><i class="fa-solid fa-user-lock"></i> Recommended Tools <i class="fa-solid fa-user-lock"></i></h1>
   </head>
   <body>
+    <div class="learn-container">
+      <div class="learn-bar" title="Click on a Section to Skip to it!">
+        <h2 style="font-size: 30px;">Section Guide:</h2>
+        <!--PC UI-->
+        <div class="learn-bar-elem" onclick="loadSection(4, 2);">
+          <p>Chrome Extension</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(4, 3);">
+          <p>Bitwarden</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(4, 4);">
+          <p>HaveIBeenPwned</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(4, 5);">
+          <p>VirusTotal</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(4, 6);">
+          <p>BitDefender</p>
+        </div>
+
+        <div class="learn-bar-elem" onclick="loadSection(4, 7);">
+          <p>Other Links</p>
+        </div>
+
+
+        <!--Mobile UI-->
+        <div class="learn-bar-mobile"><p>Click on a Section to Skip to it!</p></div>
+        <div class="learn-bar-mobile" >
+          <p onclick="loadSection(4, 2);">Chrome Extension</p>
+          <p onclick="loadSection(4, 3);">Bitwarden</p>
+          <p onclick="loadSection(4, 4);">HaveIBeenPwned</p>
+        </div>
+
+        <div class="learn-bar-mobile">
+          <p onclick="loadSection(4, 5);">VirusTotal</p>
+          <p onclick="loadSection(4, 6)">BitDefender</p>
+          <p onclick="loadSection(4, 7)">Other Links</p>
+        </div>
+      </div>
+
+
+      <div id="slideshow" class="learn-box">
+      </div>
+  </div>
     <script src="script.js"></script>
+    <script>loadSection(4,1);</script>
+    <script src="passwords.js"></script>
   </body>
 </html>
