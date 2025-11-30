@@ -114,7 +114,6 @@ h1 {
   gap: 100px;
   margin: auto;
 }
-
 .text-block,
 .text-link {
   border: 3px solid black;
@@ -498,6 +497,9 @@ h3 {
   }
   #cursor {
     height: 20px;
+  }
+  .multi-box{
+    display: block;
   }
   .navItems {
     display: none;
