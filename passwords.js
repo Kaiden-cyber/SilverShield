@@ -82,7 +82,7 @@ function passwordStrength(password) {
   if (upperCount > 0) possibleChars += 26;
   if (numCount > 0) possibleChars += 10;
   if (charCount > 0) possibleChars += 33;
-  possibleChars = possibleChars ** (password.length - 1);
+  possibleChars = possibleChars ** password.length;
   var crackFactor = 10 ** 10;
   var crackTime = possibleChars / crackFactor;
   changeText(numToTime(crackTime));
